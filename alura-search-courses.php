@@ -12,7 +12,6 @@ $crawler = new Crawler();
 $searcher = new Searcher($client, $crawler);
 $courses = $searcher->search("/cursos-online-programacao/php");
 
-foreach ($courses as $course)
-{
+foreach ($courses as $course) {
     echo $course . PHP_EOL;
 }

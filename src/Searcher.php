@@ -19,7 +19,7 @@ class Searcher
     public function search(string $url): array
     {
         $response = $this->client->request("GET", $url);
-    
+
         $html = $response->getBody();
 
         $this->crawler->addHtmlContent($html);
@@ -28,8 +28,7 @@ class Searcher
 
         $courses = [];
 
-        foreach ($elementCourses as $elementCourse)
-        {
+        foreach ($elementCourses as $elementCourse) {
             $courses[] = $elementCourse->textContent;
         }
 

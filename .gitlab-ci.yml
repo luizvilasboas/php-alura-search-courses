@@ -8,3 +8,5 @@ test:
   stage: test
   script:
     - composer check
+  tags:
+    - php

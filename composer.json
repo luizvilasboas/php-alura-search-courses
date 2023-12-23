@@ -1,0 +1,13 @@
+{
+    "name": "olooeez/alura-search-courses",
+    "description": "Sample package to understand PHP's composer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luiz Felipe de Castro Vilas Boas",
+            "email": "luizfelipecastrovb@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -25,9 +25,9 @@
         "phan/phan": "^5.4"
     },
     "scripts": {
-        "test": "phpunit tests",
-        "cs": "phpcs --standard=PSR12 src tests alura-search-courses.php",
-        "phan": "phan --allow-polyfill-parser",
+        "test": "vendor/bin/phpunit tests",
+        "cs": "vendor/bin/phpcs --standard=PSR12 src tests alura-search-courses.php",
+        "phan": "vendor/bin/phan --allow-polyfill-parser",
         "check": [
             "@phan",
             "@cs",

@@ -1,0 +1,23 @@
+name: PHP CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    env:
+      PHP_VERSION: '8.2.10'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: mbstring, dom, fileinfo, mysql
+          coverage: none
+      - name: Install Composer dependencies
+        run: composer install --no-progress
+      - name: Run Composer check script
+        run: composer check
